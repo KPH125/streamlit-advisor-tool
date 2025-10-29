@@ -22,15 +22,14 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 def analyze_document(file_bytes, mime_type, filename="uploaded_document"):
     """
     Uses the OpenAI API to analyze the uploaded document.
-    The prompt is simplified: it asks whether the document is administrative or criminal
-    and what actions the recipient should take.
+    The prompt is simplified: it asks _____
     """
     prompt = (
-        """You are an assistant that analyzes documents.
-        Based on the uploaded document, determine if it is an administrative document or a criminal document.
+        """You are a helpful assistant that analyzes documents.
+        Based on the uploaded document, identify the source of the document and the purpose of the document. 
 
         Respond with:
-        1. The type of document (administrative or criminal).
+        1. A simple summary of the source and purpose of the document. 
         2. A short, clear explanation (in simple, non-legal language).
         """
     )
